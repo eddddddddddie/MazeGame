@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maze Runner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Title Screen -->
+        <div id="title-screen" class="screen active">
+            <h1>MAZE RUNNER</h1>
+            <p class="subtitle">Navigate the maze. Collect stars. Beat the clock.</p>
+            <button id="play-btn" class="btn btn-primary">PLAY</button>
+        </div>
+
+        <!-- Character Customization -->
+        <div id="customize-screen" class="screen">
+            <h2>DESIGN YOUR CHARACTER</h2>
+            <canvas id="preview-canvas" width="140" height="200"></canvas>
+            <div class="customize-options">
+                <div class="option-group">
+                    <label>HAIR</label>
+                    <div class="color-swatches" data-category="hair"></div>
+                </div>
+                <div class="option-group">
+                    <label>T-SHIRT</label>
+                    <div class="color-swatches" data-category="shirt"></div>
+                </div>
+                <div class="option-group">
+                    <label>PANTS</label>
+                    <div class="color-swatches" data-category="pants"></div>
+                </div>
+                <div class="option-group">
+                    <label>SHOES</label>
+                    <div class="color-swatches" data-category="shoes"></div>
+                </div>
+            </div>
+            <button id="start-btn" class="btn btn-primary">START GAME</button>
+        </div>
+
+        <!-- Game Screen -->
+        <div id="game-screen" class="screen">
+            <div id="hud">
+                <span id="hud-level">Level 1</span>
+                <span id="hud-score">Score: 0</span>
+                <span id="hud-time">0:00</span>
+                <span id="hud-stars"></span>
+            </div>
+            <canvas id="game-canvas"></canvas>
+            <p class="hint">Arrow keys or WASD to move</p>
+        </div>
+
+        <!-- Level Complete -->
+        <div id="level-complete-screen" class="screen">
+            <h2>LEVEL COMPLETE!</h2>
+            <div id="level-stats"></div>
+            <button id="next-level-btn" class="btn btn-primary">NEXT LEVEL</button>
+        </div>
+
+        <!-- Game Complete -->
+        <div id="game-complete-screen" class="screen">
+            <h2>CONGRATULATIONS!</h2>
+            <p class="subtitle">You conquered all the mazes!</p>
+            <div id="final-stats"></div>
+            <button id="replay-btn" class="btn btn-primary">PLAY AGAIN</button>
+        </div>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
